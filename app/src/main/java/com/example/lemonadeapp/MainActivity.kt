@@ -19,29 +19,20 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LemonadeAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                LemonadeApp()
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    @Composable
+    fun lemonadeApp() {
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    LemonadeAppTheme {
-        Greeting("Android")
+    @Preview(showBackground = true)
+    @Composable
+    fun LemonadeAppPreview() {
+        LemonadeAppTheme {
+            LemonadeApp()
+        }
     }
 }
